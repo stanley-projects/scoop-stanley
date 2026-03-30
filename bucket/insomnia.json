@@ -6,17 +6,20 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/stanley-projects/Insomnia/releases/download/v1.2.0/Insomnia.Setup.1.2.0.exe",
-      "hash": "902254DF88D12BAE8C83062BAC8EF9722A3E06B141400A953FF46663354770ED"
+      "hash": "19800AB8B8C0F7C3D7FAFFFE25A49E154BC2C0BD5399EAAB72A493C97C02217F"
     }
   },
   "installer": {
-    "script": "Start-Process \"$dir\$fname\" '/S' -Wait"
+    "script": "Start-Process \"$dir$fname\" \"/S\" -Wait"
   },
   "uninstaller": {
-    "script": "Start-Process \"$env:LOCALAPPDATA\Programs\insomnia-app\Uninstall Insomnia.exe\" '/S' -Wait"
+    "script": "Start-Process \"$env:LOCALAPPDATAProgramsinsomnia-appUninstall Insomnia.exe\" \"/S\" -Wait"
   },
   "shortcuts": [
-    ["$env:LOCALAPPDATA\Programs\insomnia-app\Insomnia.exe", "Insomnia"]
+    [
+      "$env:LOCALAPPDATAProgramsinsomnia-appInsomnia.exe",
+      "Insomnia"
+    ]
   ],
   "checkver": {
     "github": "https://github.com/stanley-projects/Insomnia"
